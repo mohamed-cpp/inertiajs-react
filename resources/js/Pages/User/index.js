@@ -12,8 +12,9 @@ const Index = () => {
           <meta name="description" content="Index" />
         </Helmet>
       <h1>ssssssssss</h1>
-        {user.email}
-        <Link href="/about" method="get" as="a" type="button">About</Link>
+        <div>{user.email}</div>
+        <div><Link href="/about" method="get" as="a" type="button">About</Link></div>
+        <div>{route('home')}</div>
       </div>
   );
 };

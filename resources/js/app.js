@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import { render } from 'react-dom';
 import { InertiaApp } from '@inertiajs/inertia-react';
 import { InertiaProgress } from '@inertiajs/progress';
@@ -19,4 +19,22 @@ render(
     }
   />,
   app
-);
+);*/
+
+import React from 'react'
+import { render } from 'react-dom'
+import { createInertiaApp } from '@inertiajs/inertia-react'
+import { InertiaProgress } from '@inertiajs/progress';
+
+InertiaProgress.init({
+  color: '#ED3936',
+  showSpinner: true
+});
+
+
+createInertiaApp({
+  resolve: name => require(`./Pages/${name}`),
+  setup({ el, App, props }) {
+    render(<App {...props} />, el)
+  },
+})

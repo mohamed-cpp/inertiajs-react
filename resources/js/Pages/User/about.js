@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, usePage } from '@inertiajs/inertia-react';
+import { Link, usePage, InertiaLink  } from '@inertiajs/inertia-react';
 import {Helmet} from "react-helmet";
 
 
@@ -12,8 +12,10 @@ const About = () => {
           <meta name="description" content="About" />
         </Helmet>
       <h1>sssssssss22222s</h1>
-        {user}
-        <Link href="/" method="get" as="a" type="as">Index</Link>
+      <div>{user}</div>
+      <div><Link href="/" method="get" as="a" type="as">Index</Link></div>
+      <div><InertiaLink  href="/" method="get" as="a" type="as">Index</InertiaLink></div>
+      <div>{route('about')}</div>
       </div>
   );
 };
